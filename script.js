@@ -9,13 +9,14 @@ form.addEventListener('submit',function(e){
 
 function tabua(){
   //recupera os valores dos elementos no HTML, Number converte string para número
-    const x = Number(document.getElementById('numero').value)
+    const x = document.getElementById('numero').value
     let resultado = ''
     const tabela = document.getElementById('texto')
 
-    if (isNaN(x) && x === ""){
-        alert = ('Não foi inserido Valor')
-        return
+    if (x.trim() === '' || isNaN(Number(x))){
+        
+        alert ('Não foi inserido Valor!');
+
     }else{
 
         //inicia a repetição
